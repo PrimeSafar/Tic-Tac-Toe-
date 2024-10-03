@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<script src="script.js" defer></script>
+<body>
+    <div class="Container">
+        <div class="TextH1">
+        <div class="Tic">
+    <h1 class="H1T1" >T</h1>
+    <h1 class="H1I1" >i</h1>
+    <h1 class="H1C1" >c</h1>
+        </div>
+    <div class="Tac">
+    <h1 class="H1T2" >T</h1>
+    <h1 class="H1A2" >a</h1>
+    <h1 class="H1C2" >c</h1>
+        </div>
+    <div class="Toe"></div>
+    <h1 class="H1T3" >T</h1>
+    <h1 class="H1O3" >o</h1>
+    <h1 class="H1E3" >e</h1>
+</div>
+
+<div class="Board">
+    <div class="cell" id="cell1"></div>
+    <div class="cell" id="cell2"></div>
+    <div class="cell" id="cell3"></div>
+    <div class="cell" id="cell4"></div>
+    <div class="cell" id="cell5"></div>
+    <div class="cell" id="cell6"></div>
+    <div class="cell" id="cell7"></div>
+    <div class="cell" id="cell8"></div>
+    <div class="cell" id="cell9"></div>
+</div>  
+
+<button class="ClickToStart">Click To Start</button>
+
+<dialog id="dialog">
+    <h2 id="dialogTitle"></h2>
+    <div class="playerName">
+        <label for="player1">Player 1:</label>
+        <br>
+        <input type="text" id="InputPlayer1" name="player1" required>
+    </div>
+    <div class="playerName"></div>
+        <label for="player2">Player 2:</label>
+        <br>
+        <input type="text" id="InputPlayer2" name="player2" required>
+    <button id="startButton">Start</button>
+    <br>
+    <button id="cancelButton">Cancel</button>
+    </dialog> 
+
+    <dialog class="ShowWin">
+        <h2 id="showWinTitle"></h2>
+        <p id="showWinText"></p>
+        <button id="playAgainButton">Play Again</button>
+    </dialog>
+    
+    <dialog class="ShowDraw">
+        <h2 id="showDrawTitle">Game Over!</h2>
+        <p id="showDrawText">It's a draw!</p>
+        <button id="playAgainDrawButton">Play Again</button>
+    </dialog>
+    
+
+</div> 
+
+</body>
+</html>

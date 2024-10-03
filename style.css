@@ -1,0 +1,296 @@
+@font-face {
+    font-family: JungleAdventurer;
+    src: url(./jungle-adventurer/JungleAdventurer.ttf);
+}
+body,html{
+    margin: 0;
+    padding: 0;
+}
+.Container{
+    width: 100%;
+    height: 170vh;
+    background-color: #D6E6F2;
+}
+
+.TextH1{
+    font-family: JungleAdventurer;
+    font-size: 4rem;
+    color: #000000;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: fit-content;
+    display: flex;
+}
+.Tac,.Tic,.Toe{
+    display: flex;
+    margin-right: 1%;
+}
+.H1T1{
+    color: #FF1E1E;
+}
+.H1T2{
+    color: #00FFD1;
+}
+.H1T3{
+    color: #FFFF00;
+}
+.H1I1{
+    color: #31C6D4;
+}
+.H1C1{
+    color: #FFFF00;
+}
+.H1A2{
+    color: #FF1E1E;
+}
+.H1C2{
+    color: #31C6D4;
+}
+.H1O3{
+    color: #00FFD1;
+}
+.H1E3{
+    color: #31C6D4;
+}
+.Board {
+    display: none;  /* Use flex layout */
+    flex-wrap: wrap;  /* Allow wrapping of the cells */
+    width: 400px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center; /* Center the cells horizontally */
+    align-items: center;  /* Center the cells vertically */
+    gap: 10px;  /* Optional: Adds a gap between cells */
+}
+
+.cell{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: JungleAdventurer;
+    font-weight: 200;
+}
+.cell:hover{
+    background-color: #F4F4F4;
+}
+.Player1Name{
+    color: #FF1E1E;
+    background-color: #F4F4F4;
+    padding: 5px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    border-radius: 4px 1px 40px 15px / 21px 2px 12px 22px ;
+    font-family: JungleAdventurer;
+    margin-top: 20px;
+    padding-top: 2%;
+}
+.Player2Name{
+    color: #31C6D4;
+    background-color: #F4F4F4;
+    padding: 5px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 4px 1px 40px 15px / 21px 2px 12px 22px ;
+    font-family: JungleAdventurer;
+    margin-top: 20px;
+    padding-top: 1%;
+    padding-top: 2%;
+    margin-left: 4%;
+}
+.Round
+{
+    color: #e1e107;
+    background-color: #F4F4F4;
+    padding: 5px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 4px 1px 40px 15px / 21px 2px 12px 22px ;
+    font-family: JungleAdventurer;
+    margin-top: 20px;
+    padding-top: 1%;
+    padding-top: 2%;
+    margin-left: 4%;
+}
+.reset,.ScoreForPlayer11,.ScoreForPlayer22{
+    font-family: JungleAdventurer;
+    font-size: 2rem;
+    color: #000000;
+    width: 200px;
+    height: 70px;
+    background-color: #F4F4F4;
+    border: none;
+    border-radius: 4px 1px 40px 15px / 21px 2px 12px 22px ;
+}
+.reset,.ScoreForPlayer22{
+margin-left: 4%;
+}
+.ScoreForPlayer11,.ScoreForPlayer22{
+    padding-top: 15px;
+    text-align: center;
+    height: 60px;
+}
+
+/* Button To Start */
+.ClickToStart{
+    font-family: JungleAdventurer;
+    font-size: 3rem;
+    color: #000000;
+    margin-top: 10px;
+    width: 450px;
+    height: 100px;
+    background-color: #31C6D4;
+    color: white;
+    border: none;
+    margin-left: 35%;
+    font-weight: bold;
+    border-radius: 60px 40px 20px 10px / 21px 49px 27px 7px ;
+}
+.ClickToStart:hover{
+    background-color: #FFFF00;
+    color: white;
+}
+
+/* dialog */
+#dialog{
+    font-family: JungleAdventurer;
+    font-size: 2rem;
+    color: #000000;
+    width: 300px;
+    height: 400px;
+    background-color: #F4F4F4;
+    padding: 20px;
+   border-radius: 14px ; 
+}
+#dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#InputPlayer1,#InputPlayer2{
+    width: 300px;
+    height: 30px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: JungleAdventurer;
+    margin-top: 5%;
+}
+#InputPlayer1:focus{
+    border: 1px solid black;
+    background-color: #bdbaba;
+}
+#InputPlayer2:focus{
+    border: 1px solid black;
+    background-color: #bdbaba;
+}
+#startButton{
+    width: 200px;
+    height: 50px;
+    font-size: 2rem;
+    margin-top: 10px;
+    background-color: #31C6D4;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: JungleAdventurer;
+    margin-left: 15%;
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+#startButton:hover{
+    background-color: #FFFF00;
+    color: black;
+}
+#cancelButton:hover{
+    background-color: #FFFF00;
+    color: black;
+}
+#cancelButton{
+    width: 200px;
+    height: 50px;
+    font-size: 2rem;
+    margin-top: 10px;
+    background-color: #FF1E1E;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: JungleAdventurer;
+    margin-left: 15%;
+}
+.DivList{
+    display: flex;
+    width: 50%;
+    height: 200px;
+    margin-left: 25%;
+}
+.DivREs{
+    display: flex;
+    width: 50%;
+    height: 200px;
+    margin-left: 26%;
+}
+.ShowWin,.ShowDraw
+{
+    font-family: JungleAdventurer;
+    font-size: 2rem;
+    color: #000000;
+    width: 300px;
+    height: 400px;
+    background-color: #F4F4F4;
+    padding: 20px;
+   border-radius: 14px ;
+}
+.ShowWin::backdrop, 
+.ShowDraw::backdrop{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#showWinTitle,#showWinText,#showDrawTitle,#showDrawText{
+    font-size: 2rem;
+    text-align: center;
+    font-family: JungleAdventurer;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+#playAgainButton,#playAgainDrawButton{
+    width: 200px;
+    height: 50px;
+    font-size: 2rem;
+    margin-top: 10px;
+    background-color: #FF1E1E;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: JungleAdventurer;
+    margin-left: 15%;
+}
+#playAgainButton:hover{
+    background-color: #FFFF00;
+    color: black;
+}
+#playAgainDrawButton:hover{
+    background-color: #FFFF00;
+    color: black;
+}
+
